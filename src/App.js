@@ -1,26 +1,24 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import Family from './components/Family';
+import { MyProvider } from './context';
 import './App.css';
 
 class App extends Component {
+  state = {
+    name: 'Antonio',
+    age: 62,
+    cool: 'yes'
+  }
+
   render() {
+    const { name, age, cool } = this.state;
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <MyProvider>
+        <div className="App">
+          <h1>I'am the app</h1>
+          <Family name={name} age={age} cool={cool} />
+        </div>
+      </MyProvider>
     );
   }
 }
