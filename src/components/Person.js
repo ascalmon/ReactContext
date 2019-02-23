@@ -21,10 +21,9 @@ class Person extends Component {
               <br />
               <br />
               <button className="btn btn-dark" onClick={context.changeCoolStatus}>
-                  <i className="fas fa-thumbs-up" >
-                    Cool
-                  </i>
-                {}}
+                <i className="fas fa-thumbs-up" >
+                Cool
+              </i>
               </button>
             </React.Fragment>
           )}
