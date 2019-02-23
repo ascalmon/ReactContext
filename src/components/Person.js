@@ -13,9 +13,19 @@ class Person extends Component {
               <p>Name: {context.state.contacts}</p>
               <p>Age: {context.state.age} </p>
               <p>Cool: {context.state.cool}</p>
-              <button onClick={context.growAYearOlder}>Birthdate</button>
+            <button className="btn btn-dark" onClick={context.growAYearOlder}>
+              <i className="fas fa-birthday-cake" >
+              Birthday
+            </i>
+            </button>
               <br />
-              <button onClick={context.changeCoolStatus}>Cool Staus</button>
+              <br />
+              <button className="btn btn-dark" onClick={context.changeCoolStatus}>
+                  <i className="fas fa-thumbs-up" >
+                    Cool
+                  </i>
+                {}}
+              </button>
             </React.Fragment>
           )}
         </MyConsumer>
