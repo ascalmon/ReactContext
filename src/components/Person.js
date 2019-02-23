@@ -9,10 +9,16 @@ class Person extends Component {
     return(
       <div className="person">
         <MyConsumer>
-          {(context) => (
-            <p>I'm inside the consumer</p>
+          {(context) => (  // child of Consumer
+            <React.Fragment>
+              <p>Name: {context.state.name}</p>
+              <p>Age: {context.state.age} </p>
+              <p>Cool: {context.state.cool}</p>
+              <button onClick={context.growAYearOlder}>Birthdate</button>
+              <br />
+              <button onClick={context.changeCoolStatus}>Cool Staus</button>
+            </React.Fragment>
           )}
-
         </MyConsumer>
       </div>
     )

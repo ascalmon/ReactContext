@@ -6,14 +6,21 @@ const MyContext = React.createContext();
 // Then create a Provider component
 export class MyProvider extends Component {
   state = {
-    name: 'Antonio',
-    age: 62,
+    name: 'John Doe',
+    age: 39,
     cool: 'Yes'
   }
 
   render() {
     return (
-      <MyContext.Provider value="I'am the value">
+      <MyContext.Provider value={{
+        state: this.state, // Provider makes available the entire state
+        growAYearOlder: () => this.setState({
+          age: this.state.age + 1
+        }),
+        changeCoolStatus: () =>
+        this.state.cool === 'Yes' ? this.setState({cool: 'No'}) : this.setState({cool: 'Yes'})
+      }}>
         {this.props.children}
       </MyContext.Provider>
     )
