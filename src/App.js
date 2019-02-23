@@ -11,7 +11,7 @@ class App extends Component {
     return (
       <MyProvider>
         <div className="App">
-          <h1>Raact Context Test</h1>
+          <h1>React Context Test</h1>
           <Family />
         </div>
       </MyProvider>
